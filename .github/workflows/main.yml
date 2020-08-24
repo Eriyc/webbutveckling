@@ -17,15 +17,16 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Enter frontpage
-        run: cd ./frontpage/
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd ./frontpage
+          npm install
       - name: Build
-        run: npm run build
+        run: |
+          cd ./frontpage  
+          npm run build
       - name: Combine projects
         run: |
-          cd ..
           mkdir hosted
           cp -r ./frontpage/build ./hosted
           echo Frontpage was copied
