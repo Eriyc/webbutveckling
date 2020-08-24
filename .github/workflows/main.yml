@@ -28,10 +28,10 @@ jobs:
       - name: Combine projects
         run: |
           mkdir hosted
-          cp -r ./frontpage/build ./hosted
+          cp -vr ./frontpage/build ./hosted
           echo Frontpage was copied
           mkdir hosted/recipe
-          cp -r ./recipe ./hosted/recipe
+          cp -vr ./recipe ./hosted/recipe
           echo Recipe was copied
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
