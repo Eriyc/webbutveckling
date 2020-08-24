@@ -24,7 +24,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Combine projects
-      - run: |
+        run: |
           cd ..
           mkdir hosted
           cp -r ./frontpage/build ./hosted
