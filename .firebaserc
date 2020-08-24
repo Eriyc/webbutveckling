@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "dgrendev": {
+      "hosting": {
+        "web": [
+          "web-dgrendev"
+        ]
+      }
+    }
+  }
+}

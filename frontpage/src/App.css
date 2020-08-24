@@ -1,0 +1,52 @@
+/*
+
+Elevation guide
+00dp: background-color: rgb(255,255,255,0);
+01dp: background-color: rgb(255,255,255,0.05);
+02dp: background-color: rgb(255,255,255,0.07);
+03dp: background-color: rgb(255,255,255,0.08);
+04dp: background-color: rgb(255,255,255,0.09);
+06dp: background-color: rgb(255,255,255,0.11);
+08dp: background-color: rgb(255,255,255,0.12);
+12dp: background-color: rgb(255,255,255,0.14);
+16dp: background-color: rgb(255,255,255,0.15);
+24dp: background-color: rgb(255,255,255,0.16);
+
+
+*/
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  flex: 1;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Project-grid {
+  display: flex;
+  flex: 4;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: rgb(255, 255, 255, 0.11);
+  border-radius: 4px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px;
+  padding: 16px;
+}

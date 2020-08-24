@@ -1,0 +1,46 @@
+.Button {
+  background-image: linear-gradient(
+    to right,
+    #895cf2 0%,
+    #ffabf4 50%,
+    #895cf2 100%
+  );
+  background-size: 200% auto;
+  border-width: 1;
+  border-style: hidden;
+  border-radius: 4px;
+  padding: 4px 8px;
+  transition: all 0.3s ease-in;
+  flex: 1;
+}
+
+.Button:hover {
+  background-position: right center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.Button:active {
+  border: hidden;
+  outline: none;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.Button-style {
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  justify-content: center;
+}
+
+.Button-text {
+  justify-self: center;
+  align-self: center;
+  margin-left: 8px;
+  text-align: center;
+}

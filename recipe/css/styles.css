@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* page css */
+
+html,
+body {
+  margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.grow {
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links .anchor:not(:last-child) {
+  margin-right: 8px;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#activated {
+  position: relative;
+}
+
+#activated::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  bottom: 0;
+}
+
+/* Content */
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("../img/stickbug.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.75);
+  width: 60%;
+  justify-content: space-between;
+  height: calc(100vh - 32px);
+  padding: 16px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+
+#counter {
+  font-size: 2em;
+}
+
+.footer .text {
+  margin-bottom: -10px;
+}
