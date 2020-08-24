@@ -35,8 +35,8 @@ jobs:
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
-          name: hosted
-          path: dist
+          name: dist
+          path: hosted
 
   # This job will upload the commited dist-folder to firebase hosting
   deploy:
@@ -48,15 +48,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@master
+      - name: Checkout Repo
+        uses: actions/checkout@master
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
           name: dist
-          path: dist
-      - uses: w9jds/firebase-action@master
+          path: hosted
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:web-dgrendev
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           PROJECT_ID: ${{ secrets.PROJECT_ID }}
