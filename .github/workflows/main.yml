@@ -67,9 +67,8 @@ jobs:
           name: dist
           path: build
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting:web-dgrendev
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: ${{ secrets.PROJECT_ID }}
+        run: |
+          sudo npm install -g firebase-tools
+          firebase use ${{ secrets.PROJECT_ID }} --token ${{ secrets.FIREBASE_TOKEN }}
+      - name: Deploy site
+        run: firebase deploy --only hosting:web-dgrendev --non-interactive --token ${{ secrets.FIREBASE_TOKEN }} -m "RunID ${{ github.run_id }} Commit SHA ${{ github.sha }}"
