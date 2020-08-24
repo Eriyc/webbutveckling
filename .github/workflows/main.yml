@@ -37,17 +37,17 @@ jobs:
           npm run build
       - name: Combine projects
         run: |
-          mkdir hosted
-          cp -vr ./frontpage/build/. ./hosted
+          mkdir build
+          cp -vr ./frontpage/build/. ./build
           echo Frontpage was copied
-          mkdir hosted/recipe
-          cp -vr ./recipe ./hosted
+          mkdir build/recipe
+          cp -vr ./recipe ./build
           echo Recipe was copied
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: dist
-          path: hosted
+          path: build
 
   # This job will upload the commited dist-folder to firebase hosting
   deploy:
@@ -65,7 +65,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
-          path: hosted
+          path: build
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
