@@ -10,7 +10,7 @@ export default (project: Project) => {
     <div className="Card-root">
       <div id={project.id} className="will-grow"></div>
       <div className="Card-image-fix">
-        <img src={project.image} className="Card-image" />
+        <img src={project.image} alt="Project preview" className="Card-image" />
       </div>
       <div className="Card-content">
         <h3 className="Card-title">{project.title}</h3>
@@ -19,6 +19,7 @@ export default (project: Project) => {
             if (tech === "javascript") return <Js height={35} width={35} />;
             else if (tech === "css") return <Css height={35} width={35} />;
             else if (tech === "html") return <Html height={35} width={35} />;
+            else return undefined
           })}
         </div>
         <div className="Button-container">
