@@ -76,8 +76,8 @@ jobs:
           key: ${{ runner.os }}-deploy-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-deploy-${{ env.cache-name }}-
+      - run: firebase target:apply hosting web web-dgrendev
       - name: Deploy to Firebase
-        run: firebase target:apply hosting web web-dgrendev
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
