@@ -35,6 +35,7 @@ jobs:
             cp -r ./frontpage/build ./hosted
       - name: prepare upload directory
         run: |
+          mkdir hosted/recipe
           cp -r ./recipe ./hosted/recipe
       - uses: w9jds/firebase-action@master
         with:
