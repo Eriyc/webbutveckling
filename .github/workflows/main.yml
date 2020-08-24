@@ -19,10 +19,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
-      - name: build frontpage
-        uses: actions/setup-node@master
+      - uses: actions/setup-node@master
         with:
           node-version: "10.x"
+      - name: build frontpage
         # start by preventing error: dir hosted does not exist and then build frontpage, then copy all projects to their path
         run: |
           mkdir hosted
