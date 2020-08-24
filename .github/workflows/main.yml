@@ -19,7 +19,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@master
-      - run: rm -R ./hosted/
       - name: build frontpage
         uses: actions/setup-node@master
         with:
