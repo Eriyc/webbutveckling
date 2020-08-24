@@ -69,9 +69,7 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: |
-            target:apply hosting web web-dgrendev
-            deploy --only hosting
+          args: deploy --only hosting:web-dgrendev
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           PROJECT_ID: ${{ secrets.PROJECT_ID }}
