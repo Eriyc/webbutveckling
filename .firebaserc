@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dgrendev"
+  },
+  "targets": {
+    "dgrendev": {
+      "hosting": {
+        "web": [
+          "web-dgrendev"
+        ]
+      }
+    }
   }
 }
