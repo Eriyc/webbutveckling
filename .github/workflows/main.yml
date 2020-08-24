@@ -23,16 +23,16 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: "10.x"
-          # start by preventing error: dir hosted does not exist and then build frontpage, then copy all projects to their path
-          run: |
-            mkdir hosted
-            rm -R ./hosted/
-            mkdir hosted
-            cd ./frontpage/
-            npm install
-            npm run build
-            cd ..
-            cp -r ./frontpage/build ./hosted
+        # start by preventing error: dir hosted does not exist and then build frontpage, then copy all projects to their path
+        run: |
+          mkdir hosted
+          rm -R ./hosted/
+          mkdir hosted
+          cd ./frontpage/
+          npm install
+          npm run build
+          cd ..
+          cp -r ./frontpage/build ./hosted
       - name: prepare upload directory
         run: |
           mkdir hosted/recipe
