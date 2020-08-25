@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "Recept",
     image: process.env.PUBLIC_URL + "/img/test.png",
     tech: [Technologies.html, Technologies.javascript, Technologies.css],
-    github: "https://github.com/Eriyc/webbutveckling/tree/master/lektion1",
+    github: "https://github.com/Eriyc/webbutveckling/tree/master/recipe",
     link: "https://web.dgren.dev/recipe",
     id: nanoid(4),
   },
