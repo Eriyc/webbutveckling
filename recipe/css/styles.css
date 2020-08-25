@@ -73,7 +73,6 @@ body {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.75);
   width: 60%;
-  justify-content: space-between;
   height: calc(100vh - 32px);
   padding: 16px;
   position: relative;
@@ -136,6 +135,46 @@ body {
   100% {
     background-position-x: 100%;
   }
+}
+
+/* Main */
+
+main {
+  /* Create space for content and push footer down */
+  flex: 1;
+}
+
+main article {
+  display: flex;
+  flex-direction: row;
+  filter: opacity(0.8);
+  background-color: whitesmoke;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+main article > .article-content {
+  margin: 0px 16px;
+}
+
+.cover-image {
+  float: right;
+  height: 160px;
+  width: 300px;
+  resize: both;
+  image-rendering: pixelated;
+  filter: contrast(5);
+}
+
+#obfuscate {
+  width: 85px;
+  margin-left: 5px;
+}
+
+.big-list-item > div {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
 }
 
 /* Footer */

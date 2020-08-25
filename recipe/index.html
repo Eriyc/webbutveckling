@@ -13,8 +13,9 @@
     <div class="root">
       <div class="container shadow">
         <header class="header">
-          <h1 class="grow title"><a href="/recipe">RECEPT</a></h1>
-          <div class="nav-links">
+          <h1 class="title"><a href="/recipe">RECEPT</a></h1>
+          <span class="grow"></span>
+          <nav class="nav-links">
             <div class="anchor">
               <a href="recipes/first.html">Recept 1</a>
             </div>
@@ -24,10 +25,24 @@
             <div class="anchor">
               <a href="recipes/third.html">Recept 3</a>
             </div>
-          </div>
+          </nav>
         </header>
         <main>
-          <div class="shadow"></div>
+          <div>
+            <article>
+              <img
+                src="img/universe.jpg"
+                alt="universe picture"
+                height="150"
+                width="150"
+              />
+              <div class="article-content">
+                <h3>Baka ett universum!</h3>
+                <p>Lär dig hur man bakar ett universum på snabbaste sättet!</p>
+                <button onclick="window.location.replace('recipes/first.html')">Gå till receptet</button>
+              </div>
+            </article>
+          </div>
         </main>
         <footer class="footer">
           <p class="text">

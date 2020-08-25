@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
     <script src="../js/counter.js"></script>
+    <script src="../js/baffle.min.js"></script>
 
     <title>Recept 1</title>
   </head>
@@ -13,8 +14,10 @@
     <div class="root">
       <div class="container shadow">
         <header class="header">
-          <h1 class="grow title"><a href="../index.html">RECEPT</a></h1>
-          <div class="nav-links">
+          <h1 class="title"><a href="../index.html">RECEPT</a></h1>
+          <span class="grow"></span>
+
+          <nav class="nav-links">
             <div class="anchor" id="activated">
               <a href="first.html">Recept 1</a>
             </div>
@@ -24,13 +27,77 @@
             <div class="anchor">
               <a href="third.html">Recept 3</a>
             </div>
-          </div>
+          </nav>
         </header>
+        <main>
+          <div>
+            <h2>Baka enkelt ett universum</h2>
+            <hr />
+            <img
+              alt="universe image"
+              src="../img/universe.jpg"
+              class="cover-image"
+            />
+            <h4>Du kommer behöva:</h4>
+            <ul>
+              <li>
+                1 pkt Ingenting™
+              </li>
+            </ul>
+            <p>
+              Detta receptet är väldigt enkelt och du behöver bara en enda
+              ingrediens. Du kan hitta Ingenting™ i din närmaste mataffär. Jag
+              rekommenderar att du köper den bästa kvaliten du kan hitta. Priset
+              brukar spegla kvaliteten.
+            </p>
+            <h4>Dags att baka ut!</h4>
+            <ol>
+              <li>
+                Tag paketet med Ingenting™ och häll i en form, smörad eller med
+                bakplåtspapper.
+              </li>
+
+              <li class="big-list-item">
+                <div>
+                  Värm i ugnen på <span id="obfuscate">■■■■■■■■</span> °K under
+                  <span id="obfuscate">■■■■■■■■</span> timmar
+                </div>
+              </li>
+
+              <li>
+                När Ingenting™ är tillräckligt varmt kommer den brytas upp i
+                materia och anti-materia. Välj en av dem och fortsätt med
+                receptet. <em>Materia är enklast att lyckas med</em>. Du kan
+                slänga restprodukten.
+              </li>
+              <li>
+                Ställ in din valda smak i kylen och låt stå och jäsa tills ett
+                universum formats. Ingenting™ har en speciell sorts jäst, så du
+                behöver inte oroa dig för att den kommer dö i det kyliga
+                klimatet.
+              </li>
+              <li>
+                Ta ut när du tycker att den är lagom stor och baka ut i valfri
+                form. Det är populärt att dela upp den i mindre delar.
+              </li>
+            </ol>
+
+            <em>Jag kan inte stämmas för eventuella skador</em>
+          </div>
+        </main>
         <footer class="footer">
           <p class="text">
             Stick bugged for
           </p>
           <strong><span id="counter">0</span></strong>
+          <script>
+            window
+              .baffle("#obfuscate", {
+                characters: `1234567890#¤%&?`,
+                speed: 15,
+              })
+              .start();
+          </script>
         </footer>
       </div>
     </div>
