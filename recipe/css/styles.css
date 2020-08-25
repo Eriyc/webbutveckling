@@ -57,15 +57,30 @@ body {
 
 /* Content */
 
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+#bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+
 .root {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("../img/stickbug.gif");
-  background-size: cover;
-  background-position: center;
 }
 
 .container {
@@ -73,7 +88,7 @@ body {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.75);
   width: 60%;
-  height: calc(100vh - 32px);
+  min-height: calc(100vh - 32px);
   padding: 16px;
   position: relative;
 }
@@ -87,6 +102,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: -2px;
   background-image: repeating-linear-gradient(
     45deg,
