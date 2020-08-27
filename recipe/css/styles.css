@@ -193,6 +193,28 @@ main article > .article-content {
   display: flex;
 }
 
+.card {
+  background-color: white;
+  border-radius: 4px;
+  flex: 1;
+
+  margin: 8px;
+  padding: 8px;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
 /* Footer */
 
 .footer {

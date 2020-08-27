@@ -5,19 +5,38 @@ const tipFourTitle = "Jobba hårt";
 const tipFiveTitle = "Jobba hårt";
 const tipSixTitle = "Jobba hårt";
 
+const makeStep = (title, description) =>
+  `<div class="card"><h4>${title}</h4><p>${description}</p></div>`;
+
+const getRandom = () => Math.floor(Math.random() * 8) - 1;
+
 function shuffle() {
   const slotThree = document.getElementById("slotThree");
   const slotFour = document.getElementById("slotFour");
   const slotFive = document.getElementById("slotFive");
-  const title = document.getElementById("title");
-  const titleDefault = "8 Steg till framgång";
-  const titleAlternate = "Inget är hugget i sten";
+
   /* Make default slot one */
   const slotOne = document.getElementById("slotOne");
-  slotOne.innerHTML = `<h4>Gör det du älskar</h4><p>Så länge du älskar vad du gör kommer allting å bra</p>`;
+  slotOne.innerHTML = makeStep(
+    `${getRandom()}. Börja med att förbereda smeten`,
+    "Förbered de torra ingredienserna i en behållare och de flytande ingredienserna i en separat behållare"
+  );
   /* Made default slot two */
   const slotTwo = document.getElementById("slotTwo");
-  slotTwo.innerHTML = `<h4>Jobba hårt</h4><p>Framgång kommer till de som jobbar hårt!</p>`;
+  slotTwo.innerHTML = makeStep(
+    `${getRandom()}. Vispa ihop ingredienser`,
+    "Vispa ihop de flytande ingredienserna och se till att de mixas ordentligt."
+  );
+
+  slotThree.innerHTML = makeStep(
+    `${getRandom()}. Slå samman torra och flytande`,
+    "Sålla ner de torra ingredienserna i den varma flytande lösningen"
+  );
+
+  slotFour.innerHTML = makeStep(
+    `${getRandom()}. Blås på smeten`,
+    "Smeten är nu redo att bakas ut, men för att förbereda smeten för vad som kommer hjälper det att sjunga vaggvisor för den och blåsa på ställen smeten har ont."
+  );
 
   const slots = [slotOne, slotTwo, slotThree, slotFour, slotFive];
 
