@@ -18,7 +18,7 @@ export interface Project {
 const projects: Project[] = [
   {
     title: "Recept",
-    image: process.env.PUBLIC_URL + "/img/test.png",
+    image: process.env.PUBLIC_URL + "/img/recipe.png",
     tech: [Technologies.html, Technologies.javascript, Technologies.css],
     github: "https://github.com/Eriyc/webbutveckling/tree/master/recipe",
     link: "https://web.dgren.dev/recipe",
