@@ -1,62 +1,52 @@
-(() => {
+const tipOneTitle = "Gör det du älskar";
+const tipTwoTitle = "Jobba hårt";
+const tipThreeTitle = "Jobba hårt";
+const tipFourTitle = "Jobba hårt";
+const tipFiveTitle = "Jobba hårt";
+const tipSixTitle = "Jobba hårt";
+
+function shuffle() {
+  const slotThree = document.getElementById("slotThree");
+  const slotFour = document.getElementById("slotFour");
+  const slotFive = document.getElementById("slotFive");
   const title = document.getElementById("title");
   const titleDefault = "8 Steg till framgång";
   const titleAlternate = "Inget är hugget i sten";
-
-  const slotOne = document.getElementById("slotOne");
   /* Make default slot one */
+  const slotOne = document.getElementById("slotOne");
   slotOne.innerHTML = `<h4>Gör det du älskar</h4><p>Så länge du älskar vad du gör kommer allting å bra</p>`;
-
-  const slotTwo = document.getElementById("slotTwo");
   /* Made default slot two */
+  const slotTwo = document.getElementById("slotTwo");
   slotTwo.innerHTML = `<h4>Jobba hårt</h4><p>Framgång kommer till de som jobbar hårt!</p>`;
 
-  const slotThree = document.getElementById("slotThree");
+  const slots = [slotOne, slotTwo, slotThree, slotFour, slotFive];
 
-  const slotFour = document.getElementById("slotFour");
+  allElems = (function () {
+    var ret = [],
+      l = slots.length;
+    while (l--) {
+      ret[ret.length] = slots[l];
+    }
+    return ret;
+  })();
 
-  const slotFive = document.getElementById("slotFive");
-
-  const slotSix = document.getElementById("slotSix");
-
-  const tipOneTitle = "Gör det du älskar";
-  const tipTwoTitle = "Jobba hårt";
-  const tipThreeTitle = "Jobba hårt";
-  const tipFourTitle = "Jobba hårt";
-  const tipFiveTitle = "Jobba hårt";
-  const tipSixTitle = "Jobba hårt";
-
-  const slots = [slotOne, slotTwo, slotThree, slotFour, slotFive, slotSix];
-
-  function shuffle(elems) {
-    allElems = (function () {
-      var ret = [],
-        l = elems.length;
+  var shuffled = (function () {
+      var l = allElems.length,
+        ret = [];
       while (l--) {
-        ret[ret.length] = elems[l];
+        var random = Math.floor(Math.random() * allElems.length),
+          randEl = allElems[random].cloneNode(true);
+        allElems.splice(random, 1);
+        ret[ret.length] = randEl;
       }
       return ret;
-    })();
+    })(),
+    l = slots.length;
 
-    var shuffled = (function () {
-        console.log("shuffling");
-        var l = allElems.length,
-          ret = [];
-        while (l--) {
-          var random = Math.floor(Math.random() * allElems.length),
-            randEl = allElems[random].cloneNode(true);
-          allElems.splice(random, 1);
-          ret[ret.length] = randEl;
-        }
-        return ret;
-      })(),
-      l = elems.length;
-
-    while (l--) {
-      elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
-      elems[l].parentNode.removeChild(elems[l]);
-    }
+  while (l--) {
+    slots[l].parentNode.insertBefore(shuffled[l], slots[l].nextSibling);
+    slots[l].parentNode.removeChild(slots[l]);
   }
+}
 
-  setInterval(shuffle(slots), 100);
-})();
+setInterval(() => shuffle(), 1000);
