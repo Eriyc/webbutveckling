@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Boo!</title>
+    <link rel="icon" href="./img/what.gif" />
+    <script>
+      window.onbeforeunload = (e) => {
+        console.log("leave");
+        e.preventDefault();
+        alert("You are trying to leave.");
+        return "Du vill inte lämna";
+      };
+    </script>
+  </head>
+  <body id="body">
+    <div id="overlay"></div>
+    <header>
+      <h1>De döda lever</h1>
+      <nav>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank"
+          >Skräm</a
+        >
+        <a>Bu!</a>
+        <a>Hihi</a>
+      </nav>
+    </header>
+    <aside>
+      <section>
+        <h3>Överraskning</h3>
+        <button onclick="openCrab()">Klicka här</button>
+        <h3>Bus eller godis</h3>
+        <button onclick="openBus()">Bus</button>
+        <button onclick="playKodis()">Godis</button>
+        <img src="img/what.gif" alt="hehe he is coming" />
+      </section>
+    </aside>
+    <section id="articles">
+      <article>
+        <section>
+          <h2>How to kidnap</h2>
+          <p>Cool trick you can use</p>
+          <a>Läs mer</a>
+        </section>
+        <img src="img/van.jpg" alt="white van" />
+      </article>
+      <article>
+        <section>
+          <h2>Knivkaka</h2>
+          <p>Bästa sötsaken att dela ut på halloween!</p>
+          <a>Läs mer</a>
+        </section>
+        <img src="img/mmmm.jpg" alt="goodie smaskigt  " />
+      </article>
+      <article>
+        <section>
+          <h2>Verklighetstrogna "dekorationer"</h2>
+          <p>
+            Från huvudlösa kroppar till blodiga skallar, allt går att hitta
+            (eller göra själv)
+          </p>
+          <a>Läs mer</a>
+        </section>
+        <img src="img/decoration.png" alt="'decorations'" />
+      </article>
+    </section>
+    <section id="guides">
+      <section></section>
+      <section></section>
+    </section>
+    <footer>
+      <h2 id="necropolis">
+        Necropolis has risen. Prepare or f̸̢̢̰̫͕̈́͒ả̶͖̘̙̙̬͈͍̮̦͛́͑̋̊̍c̷̨̧̝̰͇͖͉̗̪͉͊̆͂͆̈́̀̎̕̚͝e̴̬̱͕͗̽̋͛̒̋̍͛ ̴̢̙̣̟͚̘̪͍̅c̶̨̢͔̣̒͌̅͗̏o̵̹̩̞̮̪̣͙̦͛̅̿͑̈͜n̶̙̯͙̪̂̕s̸̥̼̖̦̤̮͉̿̑͛̉̑̀̈́͜͝͝è̵̲̒̎̓q̶̡̻̼̯̮̽̾̽̈́̅̚ͅü̵̧̬͈̫̖͒̔̄ę̷̨̼͖͙̀̋̔̅̏̿̑n̴̜͙̰͙͗̂̅͆̏̾̈́̚c̴̨̮͚̱̞̙͖̘͊͐͗͗͆͌͂͘e̵̳̺̘͇̜͍̝̭̭̐̄̎̉s̸̨̠̹̞̫̹̟̄̎̓̍͂̏̕ͅ
+      </h2>
+    </footer>
+    <div id="fullscreen">
+      <a onclick="closeVideo()">X</a>
+    </div>
+
+    <script src="js/spook.js"></script>
+  </body>
+</html>

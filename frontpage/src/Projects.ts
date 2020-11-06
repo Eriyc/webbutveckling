@@ -13,6 +13,7 @@ export interface Project {
   github: string;
   link: string;
   id: string;
+  vecka: number;
 }
 
 const projects: Project[] = [
@@ -23,7 +24,17 @@ const projects: Project[] = [
     github: "https://github.com/Eriyc/webbutveckling/tree/master/recipe",
     link: "https://web.dgren.dev/recipe",
     id: nanoid(4),
+    vecka: 35,
   },
+  {
+	  title: "Spooky",
+	  image: process.env.PUBLIC_URL + "img/spooky.png",
+	  tech: [Technologies.html, Technologies.javascript, Technologies.css],
+	  github: "https://github.com/Eriyc/webbutveckling/tree/master/spooky",
+      link: "https://web.dgren.dev/spooky",
+      id: nanoid(4),
+      vecka: 45,
+  }
 ];
 
 export default projects;
